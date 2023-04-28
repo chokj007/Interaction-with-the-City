@@ -1,19 +1,21 @@
 <!doctype html>
 <html>
 	<head>
-		<title>Collection Example (Smileys)</title>
+		<title>City lights</title>
 		<meta charset="utf-8">
 		<meta name="viewport" content="width=device-width, initial-scale=1">
-		<link href="assets/style.css" rel="stylesheet">
-		<script defer src="cityData.js"></script>
+		<link href="style.css" rel="stylesheet">
+		
 	</head>
 	<body>
 
+		<h1>Citys' electricity consumption and cost</h1>
 		<section id="parent">
 		</section>
 		
-
-		<script src="https://data.cityofnewyork.us/resource/jr24-e7cr.json"></script>
+		<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.4/jquery.min.js"></script>
+		<script src="data.js"></script>
+		<script src="https://data.cityofnewyork.us/resource/jr24-e7cr.json?$query=SELECT%0A%20%20%60borough%60%2C%0A%20%20%60revenue_month%60%2C%0A%20%20%60current_charges%60%2C%0A%20%20%60consumption_kwh%60%2C%0A%20%20%60kwh_charges%60%2C%0A%20%20%60consumption_kw%60%2C%0A%20%20%60kw_charges%60%2C%0A%20%20%60other_charges%60%0AWHERE%20%60revenue_month%60%20%3D%20%222023-01%22%0AORDER%20BY%20%60revenue_month%60%20DESC%20NULL%20LAST"></script>
 		<!-- This allows us to use jQuery, it is also using an API. Cannot be used offline-->
 	</body>
 </html>
