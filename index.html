@@ -6,12 +6,69 @@
 		<meta name="viewport" content="width=device-width, initial-scale=1">
 		<link href="style.css" rel="stylesheet">
 		
+		
 	</head>
+
+	<header>
+	<h3><a href="about.html" id="header">About</a></h3>
+	</header>
+
 	<body>
 
-		<h1>Citys' electricity consumption and cost</h1>
-		<section id="parent">
-		</section>
+		<h1 id="top" >Citys' electricity consumption and cost</h1>
+	
+	<label for="Borough">Select a Borough:</label>
+	<select id="menu">		
+	<option value="option1">Queens</option>	
+	<option value="option2">Manhattan</option>
+	<option value="option3">Bronx</option>
+	<option value="option4">Brooklyn</option>
+	<option value="option5">Staten Island</option>
+	</select>
+
+		<section>
+		<span class="flex"id="Queens">
+		<img src="Clouds.png" class="clouds">
+		<h2>Quens</h2></span>
+
+		<span class="flex" id="Manhattan">
+			<img src="Clouds.png" class="clouds">
+		<h2>Manhattan</h2></span>
+
+		<span class="flex" id="Bronx">
+			<img src="Clouds.png" class="clouds">
+		<h2>Bronx</h2></span>
+
+		<span class="flex"id="Brooklyn">
+			<img src="Clouds.png" class="clouds">
+		<h2>Brooklyn</h2></span>
+
+		<span class="flex" id="statenIsland">
+			<img src="Clouds.png" class="clouds">
+		<h2>Staten Island</h2></span>
+
+		
+
+	</section>
+
+	<img src="Clouds.png" class="clouds">
+
+
+	<section id="bottom"> 
+
+		<div id="phone"><a href="#top">Top</a></div>
+
+		<div id="door"><a href="#top">Top</a></div>
+	
+		<div id="door"><a href="#top">Top</a></div>
+	
+		<div id="door"><a href="#top">Top</a></div>
+	
+		<div id="door"><a href="#top">Top</a></div>
+	
+		<div id="door"><a href="#top">Top</a></div>
+	</section>
+	
 		
 		<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.4/jquery.min.js"></script>
 		<script src="data.js"></script>

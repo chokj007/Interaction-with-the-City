@@ -1,37 +1,332 @@
+/* Fonts */
+
 @font-face {
     font-family:'Duplet';
-    src: url(/Fonts/Duplet/Duplet-Regular\.otf)
+    src: url(/Fonts/Duplet/Duplet-Regular.otf)
+  }
+
+  @font-face {
+    font-family:'Abelard Light';
+	src: url(/Fonts/Abelard/Abelard-Light.otf)
   }
 
   @font-face {
     font-family:'Abelard';
-    src: url(/Fonts/Abelard/Abelard-Regular\.otf)
+    src: url(/Fonts/Abelard/Abelard-Regular.otf)
   }
 
+
+  html {
+	scroll-behavior: smooth;
+	background-color: rgb(240, 207, 193);
+	background-image: url('Cityscape2.png');
+	background-repeat:repeat-x;
+	background-size: 60% 50%;
+	background-position: bottom;
+  }
 
 h1{ 
 	font-family: "Duplet"; 
 	font-size: 7rem;
 	text-align: center;
-	margin: 2em 0.5em
+	margin: 100px 0.5em;
+	color: white
 }
+
+h2{
+	font-family: 'Abelard Light'; 
+	font-size: 2rem;
+	text-align: center;
+	margin: -3em 4em;
+	color: white
+}
+
+h3{ 
+	font-family: 'Duplet'; 
+	font-size: 7rem;
+	text-align: center;
+	color: black;
+	margin: 50px
+}
+
+header{ 
+	display:flex;
+	justify-content: space-between;
+	}
 
 section{
 	display: flex;
-	flex-wrap: wrap;
+	flex-wrap: nowrap;
 	justify-content: space-around;
-
+	align-items: flex-end;
+	gap: 10px;
+	margin:0 40px
 } 
 
-div{ 
-	margin: 20px;
-	border: 2px solid lightblue; 
-	padding: 20px;
-	transition: transform .2s; 
-	font-family: 'Abelard';
+a{ 
+	color: white; 
+	text-decoration: none;
+	font-family: "Duplet"; 
+	font-size: 1rem;
 }
 
+div{ 
+	font-family: 'Abelard';
+	font-size: 0;
+}
 
-.div:hover {
-  transform: scale(1.5);
+label { 
+	display: none;
+}
+
+select{
+	display: none;
+}
+
+  /* Classes */
+  
+  .flex {
+	position: relative;
+	background-color: #474545;
+	display: flex;
+	justify-content: center;
+	flex-direction: row;
+	flex-wrap: wrap;
+	width: 100%;
+	height: 100%;
+	padding: 5px;
+	text-align: center;
+}
+
+	
+
+
+  .windows {
+	margin: 20px ;
+	transition: transform 0.3s ease-in-out;
+	padding: 20px;
+	display: flex; 
+	justify-content: center; 
+	text-align: center;
+  }
+  
+
+  .windows:hover{
+	transform: scale(1.1);
+	font-size: 1em;
+  }
+
+  .entryDiv-small {
+	width: 50px;
+	height: 100px;
+	transition: transform 0.3s ease-in-out;
+  }
+
+    /* CSS for small price bracket */
+.entryDiv-small:hover {
+	transform: scale(1.4);
+  }
+  
+  .entryDiv-medium {
+	width: 70px;
+	height: 120px;
+	transition: transform 0.3s ease-in-out;
+  }
+
+    /* CSS for medium price bracket */
+	.entryDiv-medium:hover {
+		transform: scale(1.6); 
+	  }
+  
+  .entryDiv-large {
+	width: 90px;
+	height: 140px;
+	transition: transform 0.3s ease-in-out;
+  }
+
+    /* CSS for large price bracket */
+	.entryDiv-large:hover {
+		transform: scale(1.8); 
+	  }
+  
+  .entryDiv-xlarge {
+	width: 120px;
+	height: 180px;
+	transition: transform 0.3s ease-in-out;
+  }
+
+  /* CSS for extra large price bracket */
+  .entryDiv-xlarge:hover {
+	transform: scale(2); 
+  }
+  
+
+  .clouds {
+    position: absolute;
+    top: 0;
+    left: 0;
+	width: 60%;
+	height: 400px; /* set the desired height */
+    z-index: 9999; 
+    /* or any other value that positions the clouds on top of other elements */
+    pointer-events: none; 
+    /* this property ensures that the clouds won't interfere with mouse events on other elements */
+    animation: cloudFlow 35s linear infinite;
+    background: transparent;
+	object-fit: contain;
+	opacity: 0.8
+  }
+  
+  
+  @keyframes cloudFlow {
+    from {
+      transform: translateX(0);
+    }
+    to {
+      transform: translateX(200%);
+    }
+  }
+
+  
+  
+  /* ID'S */
+
+  #header { 
+	font-size: 0.4em
+  }
+  
+  #door{
+	height: 200px;
+	background-color: #000000;
+	width: 100%;
+	padding: 50px;
+	box-shadow: inset 0 50px 0 40px #474545;
+	background-image: linear-gradient(to bottom, #290909 60%, #473333 40%);
+	border: 10px solid #444444;
+	border-left: none;
+	border-right: none;
+	display: flex; 
+	justify-content: center; 
+	align-items: center; 
+	text-align: center; 
+  }
+
+  #phone {
+	 display: none;
+  }
+
+
+
+/* Media Queries */
+
+/* Tablet */
+@media (min-width:768px) and (max-width:1278px) {
+
+	h1{ 
+		font-size: 5rem;
+		color: #000000;
+	}
+
+	h2{ 
+		font-size: 1.5rem;
+	}
+
+	.windows {
+		margin: 20px;
+		transition: transform 0.3s ease-in-out;
+		padding: 15px;
+	  }
+
+	.entryDiv-small {
+		width: 20px;
+		height: 40px;
+		transition: transform 0.3s ease-in-out;
+	  }
+
+	  
+	  .entryDiv-medium {
+		width: 40px;
+		height: 70px;
+		transition: transform 0.3s ease-in-out;
+	  }
+	
+	  
+	  .entryDiv-large {
+		width: 70px;
+		height: 100px;
+		transition: transform 0.3s ease-in-out;
+	  }
+	
+	  
+	  .entryDiv-xlarge {
+		width: 90px;
+		height: 110px;
+		transition: transform 0.3s ease-in-out;
+	  }
+
+	  section{ 
+		width: 100em;
+		gap: 10px;
+	margin:0 40px
+	  }
+
+	  #bottom { 
+		padding: 0;
+		margin: 0 35px
+	  }
+}
+
+/* Phone */
+@media only screen and (max-width: 768px) {
+
+	label { 
+		display: inline-block;
+	}
+	
+	select{
+		display: inline-block;
+	}
+
+	h1{ 
+		font-size: 2em;
+		text-align: center;
+		margin: 3em 0.5em;
+	}
+
+	h2{ 
+		font-size: 1.5rem;
+	}
+
+	#door {
+		display: none 
+	}
+
+	#phone{
+		display: block;
+	}
+
+	section > span {
+		display: none;
+	}
+
+	section > span.flex {
+		display: flex;
+	}
+
+
+	#bottom { 
+
+		height: 200px;
+		background-color: #000000;
+		padding: 50px;
+		box-shadow: inset 0 50px 0 40px #474545;
+		background-image: linear-gradient(to bottom, #290909 60%, #473333 40%);
+		border: 10px solid #444444;
+		border-left: none;
+		border-right: none;
+		display: flex; 
+		justify-content: center; 
+		align-items: center; 
+		text-align: center; 
+	}
 }

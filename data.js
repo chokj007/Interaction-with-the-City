@@ -1,47 +1,280 @@
+let brooklynMain = document.getElementById('Brooklyn');
+let manhattanMain = document.getElementById('Manhattan');
+let bronxMain = document.getElementById('Bronx');
+let statenIslandMain = document.getElementById('statenIsland');
+let queensMain = document.getElementById('Queens');
 
-// The reference to the section in our HTML
-let parentElement = document.getElementById('parent')
+let brooklynInv = 0;
+let queensInv = 0;
+let manhattanInv = 0;
+let bronxInv = 0;
+let statenIslandInv = 0;
 
-//This is some of the JQUERY code that will easily let use use this API. 
-	$.ajax({
-		url: "https://data.cityofnewyork.us/resource/jr24-e7cr.json?$query=SELECT%0A%20%20%60borough%60%2C%0A%20%20%60revenue_month%60%2C%0A%20%20%60current_charges%60%2C%0A%20%20%60consumption_kwh%60%2C%0A%20%20%60kwh_charges%60%2C%0A%20%20%60consumption_kw%60%2C%0A%20%20%60kw_charges%60%2C%0A%20%20%60other_charges%60%0AWHERE%20%60revenue_month%60%20%3D%20%222023-01%22%0AORDER%20BY%20%60revenue_month%60%20DESC%20NULL%20LAST",
-		type: "GET",
-		data: {
-		  "$limit" : 5000,
-		  "$$app_token" : "OMlJeaRsURHi7bppIFsEqLUXo"
+$.ajax({
+  url: "https://data.cityofnewyork.us/resource/jr24-e7cr.json",
+  type: "GET",
+  data: {
+    "$limit" : 5000,
+    "$$app_token" : "OMlJeaRsURHi7bppIFsEqLUXo"
+  }
+})
+.done(function(data) {
+
+  for(let i =0; i < data.length; i++){
+
+let entryDiv = document.createElement('div');
+let consumption = parseInt(data[i].consumption_kw)+parseInt(data[i].consumption_kwh)
+entryDiv.id = data[i].current_charges
+entryDiv.classList.add('windows')
+
+if (consumption < 5000) { 
+	entryDiv.style.backgroundColor = `rgb(148, 198, 125)`
+} // Light Green
+else if(consumption < 10000) { 
+	entryDiv.style.backgroundColor =`rgb(66, 99, 51)`
+}// Green
+else if(consumption < 20000) { 
+	entryDiv.style.backgroundColor =`rgb(70, 80, 134)`
+}// Blue
+else if(consumption < 30000) { 
+	entryDiv.style.backgroundColor =`rgb(50, 83, 255)` 
+}// Dark Blue
+else if(consumption < 40000) { 
+	entryDiv.style.backgroundColor =`rgb(216, 87, 187)` 
+}// Purple
+else if(consumption < 50000) { 
+	entryDiv.style.backgroundColor =`rgb(255, 255, 206)` 
+}// Beige
+else if(consumption < 60000) { 
+	entryDiv.style.backgroundColor =`rgb(231, 208, 126)`  
+}// Yellow
+else if(consumption < 70000) { 
+	entryDiv.style.backgroundColor =`rgb(255, 210, 50)` 
+}// Dark Yellow 
+else if(consumption < 80000) { 
+	entryDiv.style.backgroundColor =`rgb(255, 132, 18)` 
+}// Orange
+else if(consumption < 90000) { 
+	entryDiv.style.backgroundColor =`rgb(255, 89, 89)`   
+}// Light Red
+else if(consumption < 100000) { 
+	entryDiv.style.backgroundColor =`rgb(255, 92, 0)` 
+}// Dark Orange
+else if(consumption < 200000) { 
+	entryDiv.style.backgroundColor =`rgb(202, 56, 56)` 
+}// Red
+else if(consumption < 300000) { 
+	entryDiv.style.backgroundColor =`rgb(174, 0, 0)` 
+}// Dark Red
+else if(consumption < 600000) { 
+	entryDiv.style.backgroundColor =`rgb(0, 0, 0)` 
+	entryDiv.style.color =`rgb(255, 255, 255)` 
+}// Black
+
+
+
+
+
+if(data[i].revenue_month === '2023-01'){ 
+
+    if(data[i].borough == 'BROOKLYN'){ 
+      brooklynInv = parseInt(data[i].current_charges)+parseInt(data[i].other_charges);
+      brooklynMain.append(entryDiv);
+      entryDiv.append(brooklynInv);
+
+	  
+
+      // Add CSS class based on total charges
+      if (brooklynInv < 5000) {
+        entryDiv.classList.add('entryDiv-small');
+      } else if (brooklynInv < 10000) {
+        entryDiv.classList.add('entryDiv-medium');
+      } else if (brooklynInv < 15000) {
+        entryDiv.classList.add('entryDiv-large');
+      } else {
+        entryDiv.classList.add('entryDiv-xlarge');
+      }
+    } 
+  }
+
+  else if (data[i].borough == 'QUEENS') { 
+	queensInv = parseInt(data[i].current_charges)+parseInt(data[i].other_charges);
+	queensMain.append(entryDiv);
+	entryDiv.append(queensInv);
+
+	if (queensInv < 5000) {
+	  entryDiv.classList.add('entryDiv-small');
+	} else if (queensInv < 10000) {
+	  entryDiv.classList.add('entryDiv-medium');
+	} else if (queensInv < 15000) {
+	  entryDiv.classList.add('entryDiv-large');
+	} else {
+	  entryDiv.classList.add('entryDiv-xlarge');
+	} 
+
+} else if(data[i].borough == 'MANHATTAN'){ 
+	manhattanInv = parseInt(data[i].current_charges)+parseInt(data[i].other_charges);
+	manhattanMain.append(entryDiv);
+	entryDiv.append(manhattanInv); 
+
+	if (manhattanInv < 5000) {
+		entryDiv.classList.add('entryDiv-small');
+	  } else if (manhattanInv < 10000) {
+		entryDiv.classList.add('entryDiv-medium');
+	  } else if (manhattanInv < 15000) {
+		entryDiv.classList.add('entryDiv-large');
+	  } else {
+		entryDiv.classList.add('entryDiv-xlarge');
+	  } 
+	
+	} else if(data[i].borough == 'BRONX'){ 
+		bronxInv = parseInt(data[i].current_charges)+parseInt(data[i].other_charges);
+		bronxMain.append(entryDiv);
+		entryDiv.append(bronxInv); 
+
+		if (bronxInv < 5000) {
+			entryDiv.classList.add('entryDiv-small');
+		  } else if (bronxInv < 10000) {
+			entryDiv.classList.add('entryDiv-medium');
+		  } else if (bronxInv < 15000) {
+			entryDiv.classList.add('entryDiv-large');
+		  } else {
+			entryDiv.classList.add('entryDiv-xlarge'); 
+		  }
+
+	} else if(data[i].borough == 'STATEN ISLAND'){
+			statenIslandInv = parseInt(data[i].current_charges)+parseInt(data[i].other_charges);
+			statenIslandMain.append(entryDiv);
+			entryDiv.append(statenIslandInv)
+		  
+			if (statenIslandInv < 5000) {
+				entryDiv.classList.add('entryDiv-small');
+			  } else if (statenIslandInv < 10000) {
+				entryDiv.classList.add('entryDiv-medium');
+			  } else if (statenIslandInv < 15000) {
+				entryDiv.classList.add('entryDiv-large');
+			  } else {
+				entryDiv.classList.add('entryDiv-xlarge'); 
+			  }
 		}
-	})
-	
-	.done(function(data) {
-		
-		console.log(data[0].streetname)
-
-		for(let i =0; i < data.length; i++){
-
-			let newDiv = document.createElement ('div')
 
 
-			let red = data[i].current_charges / 100
-			let blue = data[i].consumption_kwh /300
-			let green = data[i].kwh_charges / 300
 
-	
-			newDiv.innerHTML =` 
-				<h4>${data[i].current_charges}</h4>
-				<p>${data[i].consumption_kwh}</p>
-				<p>${data[i].kwh_charges}</p>
-				`
-				newDiv.style.backgroundColor = `rgb(${red}, 220, ${blue})`
+  // Format total charges as currency
+  const formatter = new Intl.NumberFormat('en-US', {
+    style: 'currency',
+    currency: 'USD',
+  });
+  const value = parseFloat(entryDiv.innerText);
+  const formattedValue = formatter.format(value);
+  entryDiv.innerText = formattedValue;
+}
 
-			parentElement.append(newDiv)
 
-			// Use same code for desiphering color of the fill based on the key of consumption 
-			if (data[i].streetname == 'Avenue') {
-				newDiv.style.backgroundColor = `rgb(${red}, 220, ${blue})`
-			} else if (data[i].zipcode>'10300.0') {
-				newDiv.style.backgroundColor = `220, ${green}, ${blue})`
-			} else {
-				newDiv.style.backgroundColor = `rgb(${red}, ${green}, ${blue})`
-				}
-	}});
 
+console.log(brooklynTotal)
+});
+
+let menu = document.getElementById('menu');
+let bottom = document.getElementById('bottom');
+let content1 = document.getElementById('Queens');
+let content2 = document.getElementById("Manhattan");
+let content3 = document.getElementById("Bronx");
+let content4 = document.getElementById('Brooklyn');
+let content5 = document.getElementById("statenIsland");
+
+menu.addEventListener('change', function() {
+  if (menu.value === 'option1') {
+    content1.style.display = 'flex';
+    content2.style.display = 'none';
+    content3.style.display = 'none';
+	content4.style.display = 'none';
+	content5.style.display = 'none';
+	bottom.style.display = 'flex';
+
+  } else if (menu.value === "option2") {
+	content1.style.display = 'none';
+    content2.style.display = 'flex';
+    content3.style.display = 'none';
+	content4.style.display = 'none';
+	content5.style.display = 'none';
+	bottom.style.display = 'flex';
+
+  } else if (menu.value === "option3") {
+	content1.style.display = 'none';
+    content2.style.display = 'none';
+    content3.style.display = 'flex';
+	content4.style.display = 'none';
+	content5.style.display = 'none';
+	bottom.style.display = 'flex';
+  }
+  else if (menu.value === "option4") {
+	content1.style.display = 'none';
+    content2.style.display = 'none';
+    content3.style.display = 'none';
+	content4.style.display = 'flex';
+	content5.style.display = 'none';
+	bottom.style.display = 'flex';
+  }
+  else if (menu.value === "option5") {
+	content1.style.display = 'none';
+    content2.style.display = 'none';
+    content3.style.display = 'none';
+	content4.style.display = 'none';
+	content5.style.display = 'flex';
+	bottom.style.display = 'flex';
+  }
+});
+
+
+  
+// // Get all the divs with the class "hover-text"
+// var hoverDivs = document.querySelectorAll('.windows');
+
+// // Add event listeners to each div
+// hoverDivs.forEach(function(div) {
+//   div.addEventListener('mouseover', function(e) {
+//     // Get the ID of the element
+//     var id = this.id;
+
+//     fetch("https://data.cityofnewyork.us/resource/jr24-e7cr.json")
+//       .then((response) => response.json())
+//       .then((data) => {
+//         for (let i = 0; i < data.length; i++) {
+//           if (data[i].current_charges == id) {
+//             console.log(data[i].current_charges);
+//             // Show the text
+//             var textElement = this.getElementById('entryDiv.id');
+//             textElement.innerHTML = data[i].current_charges;
+//             textElement.style.display = "block";
+//           }
+//         }
+//       });
+//   });
+
+//   div.addEventListener('mouseout', function(e) {
+//     var textElement = this.getElementById('entryDiv.id');
+//     textElement.style.display = "none";
+//   });
+// });
+
+  
+// window.addEventListener('scroll', () => {
+// 	let scrollPosition = window.pageYOffset;
+// 	let cloudsElement = document.querySelector('.clouds');
+// 	let sectionElement = document.querySelector('section');
+// 	if (scrollPosition >= 500 && scrollPosition <= 1000) {
+// 	  if (!cloudsElement) {
+// 		let newCloudsElement = document.createElement('div');
+// 		newCloudsElement.classList.add('clouds');
+// 		sectionElement.append(newCloudsElement);
+// 	  }
+// 	} else {
+// 	  if (cloudsElement) {
+// 		cloudsElement.parentNode.removeappend(cloudsElement);
+// 	  }
+// 	}
+//   });
+
+
+  
