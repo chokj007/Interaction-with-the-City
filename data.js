@@ -55,11 +55,11 @@ else if(consumption < 80000) {
 	entryDiv.style.backgroundColor =`rgb(255, 132, 18)` 
 }// Orange
 else if(consumption < 90000) { 
-	entryDiv.style.backgroundColor =`rgb(255, 89, 89)`   
-}// Light Red
-else if(consumption < 100000) { 
-	entryDiv.style.backgroundColor =`rgb(255, 92, 0)` 
+	entryDiv.style.backgroundColor = `rgb(255, 92, 0)`
 }// Dark Orange
+else if(consumption < 100000) { 
+	entryDiv.style.backgroundColor = `rgb(255, 89, 89)` 
+}// Light Red
 else if(consumption < 200000) { 
 	entryDiv.style.backgroundColor =`rgb(202, 56, 56)` 
 }// Red

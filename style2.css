@@ -40,6 +40,12 @@ h5{
   margin: 70px 100px
 }
 
+h6{
+  font-family: 'Duplet'; 
+  font-size: 3em;
+  margin: 0 90px
+}
+
 header{ 
 	display:flex;
 	justify-content: space-between;
@@ -54,7 +60,76 @@ header{
 
     div{
         margin: 2em
+    }    
+
+    .colors {
+      margin: 10px 0;
     }
+
+    .columns {
+      column-count: 2; /* Adjust the number of columns as needed */
+      column-gap: 1px; /* Adjust the column gap as needed */
+      padding-right: 90em;
+      padding-left: 10em;
+    }
+    
+
+    #lightGreen{
+    color: rgb(148, 198, 125)
+    }
+
+    #Green{
+      color: rgb(66, 99, 51)
+      }
+
+    #Blue{
+    color: rgb(70, 80, 134)
+    }
+
+    #DarkBlue{
+      color: rgb(50, 83, 255)
+      }
+
+    #Purple{
+      color: rgb(216, 87, 187)
+      }
+
+      #Beige{
+        color: rgb(255, 255, 206)
+        }
+
+      #Yellow { 
+        color: rgb(231, 208, 126)
+      }
+
+      #DarkYellow { 
+        color: rgb(255, 210, 50)
+      }
+
+      #Orange { 
+        color: rgb(255, 132, 18)
+      }
+
+      #DarkOrange { 
+        color: rgb(255, 92, 0)
+      }
+
+      #LightRed { 
+        color: rgb(255, 89, 89)
+      }
+
+      #Red { 
+        color: rgb(202, 56, 56)
+      }
+
+      #DarkRed { 
+        color:rgb(174, 0, 0)
+      }
+
+      #Black { 
+        color: black
+      }
+
 
     /* Tablet */
 @media (min-width:768px) and (max-width:1278px) {
@@ -70,6 +145,20 @@ h4{
 h5{ 
   font-size: 2rem;
 }
+
+h6{
+  font-size: 3em;
+  margin: 0 70px
+}
+
+.colors {
+  font-size: 1.4em
+}
+
+.columns {
+  padding: 0 7em
+}
+
 }
 
 /* Phone */
@@ -89,6 +178,23 @@ h4{
 h5{ 
   font-size: 1rem;
   margin: 10px
+}
+
+h6{
+  font-size: 1.5em;
+  margin: 0 40px
+}
+
+div.columns { 
+  margin-top: 10px
+}
+
+.colors {
+  font-size: 0.9em
+}
+
+.columns {
+  padding: 0 0.1em;
 }
 
 }
