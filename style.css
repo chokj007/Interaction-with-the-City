@@ -326,7 +326,7 @@ select{
 label, select {
 	font-size: 1em;
 	margin-top: 0;
-	margin: 2em 1em;
+	margin: 2em 0.5em;
 }
 
 	label { 
@@ -367,6 +367,9 @@ label, select {
 		font-size: 1em;
 	}
 
+	div{ 
+		font-size: 0.5em
+	}
 
 	.windows {
 		margin: 20px;
