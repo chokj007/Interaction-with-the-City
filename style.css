@@ -68,7 +68,6 @@ section{
 	justify-content: space-around;
 	align-items: flex-end;
 	gap: 10px;
-	margin:0 40px
 } 
 
 a{ 
@@ -103,23 +102,23 @@ select{
 	flex-wrap: wrap;
 	width: 100%;
 	height: 100%;
-	padding: 5px;
+	padding: 50px;
 	text-align: center;
 }
 
 .windows {
 	position: relative;
 	margin: 20px;
-	padding: 20px;
+	padding:20px;
 	display: flex;
 	justify-content: center;
 	text-align: center;
 	height: 90px;
 	width: 30px;
-	border: 1px solid #000;
+	border: 2px solid #000;
   }
   
-  /* .windows:before,
+  .windows:before,
   .windows:after {
 	content: "";
 	position: absolute;
@@ -142,21 +141,21 @@ select{
 	left: 50%;
 	transform: translateX(-50%);
 	background-color: #000;
-	transition: all 0.3s ease;} Added transition for smooth animation */
+	transition: all 0.3s ease;} /* Added transition for smooth animation */
   
 
   .windows:hover {
-	padding: 40px;
+	padding: 40px ;
 	font-size: 1em;
 	border: none;
 	z-index: 9999;
   }
   
-  /* .windows:hover:before,
+  .windows:hover:before,
   .windows:hover:after {
 	height: 0;
   }
-   */
+  
   
 
  /* CSS for small price bracket */
@@ -225,8 +224,7 @@ select{
 	object-fit: contain;
 	opacity: 0.6
   }
-  
-  
+
   @keyframes cloudFlow {
     from {
       transform: translateX(0);
@@ -282,68 +280,84 @@ select{
 	h1{ 
 		font-size: 5rem;
 		color: #000000;
+		margin: 20px
 	}
 
 	h2{ 
-		font-size: 1.5rem;
+		font-size: 3em;
+	}
+
+	h4{ 
+		font-size: 1.5em;
 	}
 
 	.windows {
 		margin: 20px;
-		transition: transform 0.3s ease-in-out;
 		padding: 15px;
 	  }
 
-	.entryDiv-small {
-		transition: transform 0.3s ease-in-out;
-	  }
-
-	  
-	  .entryDiv-medium {
-		transition: transform 0.3s ease-in-out;
-	  }
-	
-	  
-	  .entryDiv-large {
-		transition: transform 0.3s ease-in-out;
-	  }
-	
-	  
-	  .entryDiv-xlarge {
-		transition: transform 0.3s ease-in-out;
-	  }
 
 	  section{ 
-		width: 100em;
-		gap: 10px;
-	margin:0 40px
+		margin:0 80px
 	  }
 
 	  #bottom { 
 		padding: 0;
-		margin: 0 35px
+		margin: 0 35px;
+		width: 130em;
 	  }
 }
 
 /* Phone */
 @media only screen and (max-width: 768px) {
 
+	html {
+		background-image: none;
+	}
+
+label, select {
+	font-size: 1em;
+	margin-top: 0;
+	margin: 2em 1em;
+}
+
 	label { 
 		display: inline-block;
+		padding: 20px;
+		font-family:'Abelard';
 	}
 	
 	select{
 		display: inline-block;
+		padding: 5px;
+		font-family:'Abelard';
 	}
 
 	h1{ 
 		font-size: 2em;
 		text-align: center;
 		margin: 3em 0.5em;
+		margin-bottom: 10px
 	}
 
 	h2{ 
-		font-size: 1.5rem;
+		display: none;
+	}
+
+	h3{ 
+		font-size: 2rem;
+		margin: 0 12px;
+	}
+
+  h4{ 
+		font-size: 0.8em;
+		margin: 10px;
+		padding: 0 50px
+	}
+
+	.flex { 
+		display: none;
+		padding: 20px
 	}
 
 	#door {
@@ -354,28 +368,18 @@ select{
 		display: block;
 	}
 
-	section > span {
-		display: none;
+	a { 
+		font-size: 1em;
 	}
 
-	section > span.flex {
-		display: flex;
+	#overlayText {
+		font-size: 2em;
+		margin: -40px 10px
 	}
 
 
 	#bottom { 
 
-		height: 200px;
-		background-color: #000000;
-		padding: 50px;
-		box-shadow: inset 0 50px 0 40px #474545;
-		background-image: linear-gradient(to bottom, #290909 60%, #473333 40%);
-		border: 10px solid #444444;
-		border-left: none;
-		border-right: none;
-		display: flex; 
-		justify-content: center; 
-		align-items: center; 
-		text-align: center; 
+		display: none;
 	}
 }
