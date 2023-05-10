@@ -1,0 +1,57 @@
+
+/* Fonts */
+
+@font-face {
+    font-family:'Duplet';
+    src: url(/Fonts/Duplet/Duplet-Regular.otf)
+  }
+
+  @font-face {
+    font-family:'Duplet Light';
+    src: url(/Fonts/Duplet/Duplet-Light.otf)
+  }
+
+  @font-face {
+    font-family:'Abelard';
+    src: url(/Fonts/Abelard/Abelard-Regular.otf)
+  }
+
+  html {
+    background-color: rgb(240, 207, 193);
+  }
+
+h3{ 
+	font-family: 'Duplet'; 
+	font-size: 7rem;
+	color: black;
+	margin: 70px
+}
+
+h4{ 
+	font-family: 'Duplet'; 
+	font-size: 4rem;
+	color: black;
+	margin: 70px
+}
+
+h5{
+  font-family: 'Duplet Light'; 
+	font-size: 3rem;
+  margin: 70px
+}
+
+header{ 
+	display:flex;
+	justify-content: space-between;
+	}
+
+    a{ 
+        color: white; 
+        text-decoration: none;
+        font-family: "Duplet"; 
+
+    }
+
+    div{
+        margin: 2em
+    }

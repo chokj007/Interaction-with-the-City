@@ -5,9 +5,10 @@
     src: url(/Fonts/Duplet/Duplet-Regular.otf)
   }
 
+
   @font-face {
-    font-family:'Abelard Light';
-	src: url(/Fonts/Abelard/Abelard-Light.otf)
+    font-family:'Abelard Bold';
+	src: url(/Fonts/Abelard/Abelard-Bold.otf)
   }
 
   @font-face {
@@ -21,32 +22,39 @@
 	background-color: rgb(240, 207, 193);
 	background-image: url('Cityscape2.png');
 	background-repeat:repeat-x;
-	background-size: 60% 50%;
+	background-size: 60% 40%;
 	background-position: bottom;
   }
 
 h1{ 
 	font-family: "Duplet"; 
-	font-size: 7rem;
+	font-size: 8rem;
 	text-align: center;
-	margin: 100px 0.5em;
-	color: white
+	margin: 2em;
+	color: rgb(255, 255, 255)
 }
 
 h2{
-	font-family: 'Abelard Light'; 
-	font-size: 2rem;
+	font-family: 'Abelard Bold'; 
+	font-size: 2.6rem;
 	text-align: center;
-	margin: -3em 4em;
-	color: white
+	margin: -2.8em 4em;
+	color: #ffffff
 }
 
 h3{ 
 	font-family: 'Duplet'; 
 	font-size: 7rem;
-	text-align: center;
 	color: black;
-	margin: 50px
+	margin: 0 70px
+}
+
+h4{ 
+	font-family: 'Duplet'; 
+	font-size: 2.4rem;
+	color: rgb(255, 255, 255);
+	margin: 70px;
+	opacity: 0.6;
 }
 
 header{ 
@@ -65,9 +73,10 @@ section{
 
 a{ 
 	color: white; 
+	opacity: 0.7;
 	text-decoration: none;
 	font-family: "Duplet"; 
-	font-size: 1rem;
+	font-size: 5rem;
 }
 
 div{ 
@@ -98,66 +107,90 @@ select{
 	text-align: center;
 }
 
-	
-
-
-  .windows {
-	margin: 20px ;
-	transition: transform 0.3s ease-in-out;
+.windows {
+	position: relative;
+	margin: 20px;
 	padding: 20px;
-	display: flex; 
-	justify-content: center; 
+	display: flex;
+	justify-content: center;
 	text-align: center;
+	height: 90px;
+	width: 30px;
+	border: 1px solid #000;
   }
   
+  /* .windows:before,
+  .windows:after {
+	content: "";
+	position: absolute;
+  }
+  
+  .windows:before {
+	width: 100%;
+	height: 2px;
+	top: 50%;
+	left: 0;
+	transform: translateY(-50%);
+	background-color: #000;
+	transition: all 0.3s ease;
+  }
+  
+  .windows:after {
+	width: 2px;
+	height: 100%;
+	top: 0;
+	left: 50%;
+	transform: translateX(-50%);
+	background-color: #000;
+	transition: all 0.3s ease;} Added transition for smooth animation */
+  
 
-  .windows:hover{
-	transform: scale(1.1);
+  .windows:hover {
+	padding: 40px;
 	font-size: 1em;
+	border: none;
+	z-index: 9999;
   }
+  
+  /* .windows:hover:before,
+  .windows:hover:after {
+	height: 0;
+  }
+   */
+  
 
+ /* CSS for small price bracket */
   .entryDiv-small {
-	width: 50px;
-	height: 100px;
 	transition: transform 0.3s ease-in-out;
   }
 
-    /* CSS for small price bracket */
 .entryDiv-small:hover {
-	transform: scale(1.4);
+	transform: scale(1.8);
   }
   
+  /* CSS for medium price bracket */
   .entryDiv-medium {
-	width: 70px;
-	height: 120px;
 	transition: transform 0.3s ease-in-out;
   }
-
-    /* CSS for medium price bracket */
 	.entryDiv-medium:hover {
-		transform: scale(1.6); 
+		transform: scale(2.0); 
 	  }
   
+	/* CSS for large price bracket */
   .entryDiv-large {
-	width: 90px;
-	height: 140px;
 	transition: transform 0.3s ease-in-out;
   }
-
-    /* CSS for large price bracket */
 	.entryDiv-large:hover {
-		transform: scale(1.8); 
+		transform: scale(2.2); 
 	  }
   
+	/* CSS for extra large price bracket */
   .entryDiv-xlarge {
-	width: 120px;
-	height: 180px;
 	transition: transform 0.3s ease-in-out;
   }
 
-  /* CSS for extra large price bracket */
   .entryDiv-xlarge:hover {
-	transform: scale(2); 
+	transform: scale(2.4); 
   }
   
 
@@ -166,7 +199,7 @@ select{
     top: 0;
     left: 0;
 	width: 60%;
-	height: 400px; /* set the desired height */
+	height: 800px; /* set the desired height */
     z-index: 9999; 
     /* or any other value that positions the clouds on top of other elements */
     pointer-events: none; 
@@ -176,6 +209,22 @@ select{
 	object-fit: contain;
 	opacity: 0.8
   }
+
+  .clouds1 {
+    position: absolute;
+    top: 80px;
+    left: 90px;
+	width: 60%;
+	height: 900px; /* set the desired height */
+    z-index: 9999; 
+    /* or any other value that positions the clouds on top of other elements */
+    pointer-events: none; 
+    /* this property ensures that the clouds won't interfere with mouse events on other elements */
+    animation: cloudFlow 35s linear infinite;
+    background: transparent;
+	object-fit: contain;
+	opacity: 0.6
+  }
   
   
   @keyframes cloudFlow {
@@ -183,7 +232,7 @@ select{
       transform: translateX(0);
     }
     to {
-      transform: translateX(200%);
+      transform: translateX(100%);
     }
   }
 
@@ -195,7 +244,7 @@ select{
 	font-size: 0.4em
   }
   
-  #door{
+  .door {
 	height: 200px;
 	background-color: #000000;
 	width: 100%;
@@ -205,17 +254,25 @@ select{
 	border: 10px solid #444444;
 	border-left: none;
 	border-right: none;
-	display: flex; 
-	justify-content: center; 
-	align-items: center; 
-	text-align: center; 
   }
-
+  
   #phone {
-	 display: none;
+	display: none;
   }
-
-
+  
+  #bottom {
+	position: relative;
+  }
+  
+  #overlayText {
+	position: absolute;
+	top: 60%;
+	left: 50%;
+	transform: translate(-50%, -50%);
+	color: white;
+	padding: 10px
+  }
+  
 
 /* Media Queries */
 
@@ -238,29 +295,21 @@ select{
 	  }
 
 	.entryDiv-small {
-		width: 20px;
-		height: 40px;
 		transition: transform 0.3s ease-in-out;
 	  }
 
 	  
 	  .entryDiv-medium {
-		width: 40px;
-		height: 70px;
 		transition: transform 0.3s ease-in-out;
 	  }
 	
 	  
 	  .entryDiv-large {
-		width: 70px;
-		height: 100px;
 		transition: transform 0.3s ease-in-out;
 	  }
 	
 	  
 	  .entryDiv-xlarge {
-		width: 90px;
-		height: 110px;
 		transition: transform 0.3s ease-in-out;
 	  }
 
