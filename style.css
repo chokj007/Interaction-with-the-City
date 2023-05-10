@@ -291,9 +291,17 @@ select{
 		font-size: 1.5em;
 	}
 
+	div{ 
+		font-size: 1em
+	}
+
 	.windows {
 		margin: 20px;
 		padding: 15px;
+	  }
+
+	  .window:hover { 
+		display: none;
 	  }
 
 
@@ -355,6 +363,20 @@ label, select {
 		padding: 0 50px
 	}
 
+	a { 
+		font-size: 1em;
+	}
+
+
+	.windows {
+		margin: 20px;
+		padding: 15px;
+	  }
+
+	  .window:hover { 
+		display: none;
+	  }
+
 	.flex { 
 		display: none;
 		padding: 20px
@@ -368,9 +390,6 @@ label, select {
 		display: block;
 	}
 
-	a { 
-		font-size: 1em;
-	}
 
 	#overlayText {
 		font-size: 2em;
