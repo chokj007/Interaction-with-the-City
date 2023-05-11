@@ -190,7 +190,6 @@ menu.addEventListener('change', function() {
     content3.style.display = 'none';
 	content4.style.display = 'none';
 	content5.style.display = 'none';
-	bottom.style.display = 'flex';
 
   } else if (menu.value === "option2") {
 	content1.style.display = 'none';
@@ -198,7 +197,6 @@ menu.addEventListener('change', function() {
     content3.style.display = 'none';
 	content4.style.display = 'none';
 	content5.style.display = 'none';
-	bottom.style.display = 'flex';
 
   } else if (menu.value === "option3") {
 	content1.style.display = 'none';
@@ -206,7 +204,6 @@ menu.addEventListener('change', function() {
     content3.style.display = 'flex';
 	content4.style.display = 'none';
 	content5.style.display = 'none';
-	bottom.style.display = 'flex';
   }
   else if (menu.value === "option4") {
 	content1.style.display = 'none';
@@ -214,7 +211,6 @@ menu.addEventListener('change', function() {
     content3.style.display = 'none';
 	content4.style.display = 'flex';
 	content5.style.display = 'none';
-	bottom.style.display = 'flex';
   }
   else if (menu.value === "option5") {
 	content1.style.display = 'none';
@@ -222,7 +218,6 @@ menu.addEventListener('change', function() {
     content3.style.display = 'none';
 	content4.style.display = 'none';
 	content5.style.display = 'flex';
-	bottom.style.display = 'flex';
   }
 });
 
@@ -250,30 +245,6 @@ menu.addEventListener('change', function() {
 //           }
 //         }
 //       });
-//   });
-
-//   div.addEventListener('mouseout', function(e) {
-//     var textElement = this.getElementById('entryDiv.id');
-//     textElement.style.display = "none";
-//   });
-// });
-
-  
-// window.addEventListener('scroll', () => {
-// 	let scrollPosition = window.pageYOffset;
-// 	let cloudsElement = document.querySelector('.clouds');
-// 	let sectionElement = document.querySelector('section');
-// 	if (scrollPosition >= 500 && scrollPosition <= 1000) {
-// 	  if (!cloudsElement) {
-// 		let newCloudsElement = document.createElement('div');
-// 		newCloudsElement.classList.add('clouds');
-// 		sectionElement.append(newCloudsElement);
-// 	  }
-// 	} else {
-// 	  if (cloudsElement) {
-// 		cloudsElement.parentNode.removeappend(cloudsElement);
-// 	  }
-// 	}
 //   });
 
 
