@@ -16,6 +16,9 @@
     src: url(/Fonts/Abelard/Abelard-Regular.otf)
   }
 
+  @import url('https://fonts.googleapis.com/css2?family=Poppins&display=swap');
+
+
 
   html {
 	scroll-behavior: smooth;
@@ -27,7 +30,7 @@
   }
 
 h1{ 
-	font-family: "Duplet"; 
+	font-family: "Duplet",'Poppins', sans-serif; 
 	font-size: 8rem;
 	text-align: center;
 	margin: 2em;
@@ -43,14 +46,14 @@ h2{
 }
 
 h3{ 
-	font-family: 'Duplet'; 
+	font-family: 'Duplet','Poppins', sans-serif; 
 	font-size: 7rem;
 	color: black;
 	margin: 0 70px
 }
 
 h4{ 
-	font-family: 'Duplet'; 
+	font-family: 'Duplet','Poppins', sans-serif; 
 	font-size: 2.4rem;
 	color: rgb(255, 255, 255);
 	margin: 70px;
@@ -74,7 +77,7 @@ a{
 	color: white; 
 	opacity: 0.7;
 	text-decoration: none;
-	font-family: "Duplet"; 
+	font-family: "Duplet",'Poppins', sans-serif; 
 	font-size: 5rem;
 }
 
@@ -281,7 +284,6 @@ select{
 	h1{ 
 		font-size: 4rem;
 		color: #000000;
-		margin: 90px
 	}
 
 	h2{ 
@@ -308,7 +310,8 @@ select{
 
 
 	  section{ 
-		margin:0 80px
+		margin:0 80px; 
+		justify-content: space-between;
 	  }
 
 	  #bottom { 
