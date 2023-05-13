@@ -72,8 +72,8 @@ header{
     }
 
     .columns {
-      column-count: 2; /* Adjust the number of columns as needed */
-      column-gap: 1px; /* Adjust the column gap as needed */
+      column-count: 2; 
+      column-gap: 1px; 
       padding-right: 30em;
       padding-left: 3em;
     }
