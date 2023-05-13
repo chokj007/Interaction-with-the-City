@@ -2,6 +2,7 @@
 
 
 @import url('https://fonts.googleapis.com/css2?family=Poppins&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Karma:wght@300&display=swap');
 
   @font-face {
     font-family:'Abelard Bold';
@@ -12,8 +13,6 @@
     font-family:'Abelard';
     src: url(/Fonts/Abelard/Abelard-Regular.otf)
   }
-
-
 
   html {
 	scroll-behavior: smooth;
@@ -33,7 +32,7 @@ h1{
 }
 
 h2{
-	font-family: 'Abelard Bold'; 
+	font-family: 'Abelard Bold','Karma', serif; ; 
 	font-size: 1.5rem;
 	text-align: center;
 	margin: -2em 4em;
@@ -78,7 +77,7 @@ a{
 }
 
 div{ 
-	font-family: 'Abelard';
+	font-family: 'Abelard','Karma', serif;;
 	font-size: 0;
 }
 
@@ -348,13 +347,13 @@ label, select {
 	label { 
 		display: inline-block;
 		padding: 20px;
-		font-family:'Abelard';
+		font-family:'Abelard', 'Karma', serif;;
 	}
 	
 	select{
 		display: inline-block;
 		padding: 5px;
-		font-family:'Abelard';
+		font-family:'Abelard','Karma', serif;;
 	}
 
 	h1{ 
