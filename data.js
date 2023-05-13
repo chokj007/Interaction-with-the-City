@@ -176,7 +176,8 @@ console.log(brooklynTotal)
 });
 
 let menu = document.getElementById('menu');
-let bottom = document.getElementById('bottom');
+let phone = document.getElementById('phone');
+let overlayText = document.getElementById('overlayText');
 let content1 = document.getElementById('Queens');
 let content2 = document.getElementById("Manhattan");
 let content3 = document.getElementById("Bronx");
@@ -190,6 +191,8 @@ menu.addEventListener('change', function() {
     content3.style.display = 'none';
 	content4.style.display = 'none';
 	content5.style.display = 'none';
+	phone.style.display = 'block';
+	overlayText.style.display = 'block'
 
   } else if (menu.value === "option2") {
 	content1.style.display = 'none';
@@ -197,6 +200,8 @@ menu.addEventListener('change', function() {
     content3.style.display = 'none';
 	content4.style.display = 'none';
 	content5.style.display = 'none';
+	phone.style.display = 'block';
+	overlayText.style.display = 'block'
 
   } else if (menu.value === "option3") {
 	content1.style.display = 'none';
@@ -204,6 +209,8 @@ menu.addEventListener('change', function() {
     content3.style.display = 'flex';
 	content4.style.display = 'none';
 	content5.style.display = 'none';
+	phone.style.display = 'block';
+	overlayText.style.display = 'block'
   }
   else if (menu.value === "option4") {
 	content1.style.display = 'none';
@@ -211,6 +218,8 @@ menu.addEventListener('change', function() {
     content3.style.display = 'none';
 	content4.style.display = 'flex';
 	content5.style.display = 'none';
+	phone.style.display = 'block';
+	overlayText.style.display = 'block'
   }
   else if (menu.value === "option5") {
 	content1.style.display = 'none';
@@ -218,6 +227,8 @@ menu.addEventListener('change', function() {
     content3.style.display = 'none';
 	content4.style.display = 'none';
 	content5.style.display = 'flex';
+	phone.style.display = 'block';
+	overlayText.style.display = 'block'
   }
 });
 

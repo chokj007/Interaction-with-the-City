@@ -26,7 +26,7 @@
 
 h1{ 
 	font-family:"Poppins", sans-serif; 
-	font-size: 8rem;
+	font-size: 3rem;
 	text-align: center;
 	margin: 2em;
 	color: rgb(255, 255, 255)
@@ -34,24 +34,24 @@ h1{
 
 h2{
 	font-family: 'Abelard Bold'; 
-	font-size: 2.6rem;
+	font-size: 1.5rem;
 	text-align: center;
-	margin: -3.8em 4em;
+	margin: -2em 4em;
 	color: #471313
 }
 
 h3{ 
 	font-family:'Poppins', sans-serif; 
-	font-size: 7rem;
+	font-size: 6rem;
 	color: black;
 	margin: 0 70px
 }
 
 h4{ 
 	font-family:'Poppins', sans-serif; 
-	font-size: 2.4rem;
+	font-size: 1.5rem;
 	color: rgb(255, 255, 255);
-	margin: 70px;
+	margin: 80px;
 	opacity: 0.6;
 }
 
@@ -63,8 +63,8 @@ header{
 section{
 	display: flex;
 	flex-wrap: nowrap;
-	justify-content: space-around;
 	align-items: flex-end;
+	width: 100%;
 	gap: 10px;
 } 
 
@@ -73,7 +73,7 @@ a{
 	opacity: 0.7;
 	text-decoration: none;
 	font-family:'Poppins', sans-serif; 
-	font-size: 5rem;
+	font-size: 2rem;
 }
 
 div{ 
@@ -98,9 +98,9 @@ select{
 	justify-content: center;
 	flex-direction: row;
 	flex-wrap: wrap;
-	width: 100%;
+	width: 18%;
 	height: 100%;
-	padding: 40px;
+	padding: 10px;
 	/* margin: 0 10px; */
 	text-align: center;
 	gap: 10px;
@@ -109,13 +109,13 @@ select{
 
 .windows {
 	position: relative;
-	margin: 20px;
-	padding:20px;
+	margin: 5px;
+	padding:10px;
 	display: flex;
 	justify-content: center;
 	text-align: center;
-	height: 90px;
-	width: 30px;
+	height: 40px;
+	width: 10px;
 	border: 2px solid #000;
   }
   
@@ -224,6 +224,18 @@ select{
 	opacity: 0.6
   }
 
+  .door {
+	height: 200px;
+	background-color: #000000;
+	width: 100%;
+	padding: 50px;
+	box-shadow: inset 0 50px 0 40px #474545;
+	background-image: linear-gradient(to bottom, #290909 60%, #473333 40%);
+	border: 10px solid #444444;
+	border-left: none;
+	border-right: none;
+  }
+
   @keyframes cloudFlow {
     from {
       transform: translateX(0);
@@ -241,17 +253,9 @@ select{
 	font-size: 0.4em
   }
   
-  .door {
-	height: 200px;
-	background-color: #000000;
-	width: 100%;
-	padding: 50px;
-	box-shadow: inset 0 50px 0 40px #474545;
-	background-image: linear-gradient(to bottom, #290909 60%, #473333 40%);
-	border: 10px solid #444444;
-	border-left: none;
-	border-right: none;
-  }
+#marginChange { 
+	margin: -2.9em 4em;
+}
   
   #phone {
 	display: none;
@@ -278,7 +282,6 @@ select{
 
 	h1{ 
 		font-size: 4rem;
-		color: #000000;
 	}
 
 	h2{ 
@@ -294,6 +297,10 @@ select{
 		overflow: scroll;
 	}
 
+	.flex {
+		width: 40%
+	}
+
 	.windows {
 		margin: 20px;
 		padding: 15px;
@@ -305,8 +312,9 @@ select{
 
 
 	  section{ 
-		margin:0 80px; 
+		margin:0 40px; 
 		justify-content: space-between;
+		width: 120.2%
 	  }
 
 	  #bottom { 
@@ -364,9 +372,9 @@ label, select {
 	}
 
   h4{ 
-		font-size: 1em;
+		font-size: 0.8em;
 		margin: 5px;
-		padding: 0 20px
+		padding: 10px 20px
 	}
 
 	a { 
@@ -388,7 +396,8 @@ label, select {
 
 	.flex { 
 		display: none;
-		padding: 20px
+		padding: 20px;
+		width: 100%
 	}
 
 	.windows:before,
@@ -396,24 +405,30 @@ label, select {
 	  height: 0;
 	}
 
-	#door {
+	.door {
 		display: none 
 	}
 
 	#phone{
-		display: block;
+		display: none;
+		height: 200px;
+		background-color: #000000;
+		width: 100%;
+		padding: 50px;
+		box-shadow: inset 0 50px 0 40px #474545;
+		background-image: linear-gradient(to bottom, #290909 60%, #473333 40%);
+		border: 10px solid #444444;
+		border-left: none;
+		border-right: none;
 	}
 
 
 	#overlayText {
-		font-size: 2em;
+		display: none;
+		font-size: 1em;
 		margin: -40px 10px
 	}
 
 
-	#bottom { 
-
-		display: none;
-	}
 	
 }
