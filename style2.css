@@ -1,6 +1,9 @@
 
 /* Fonts */
 
+@import url('https://fonts.googleapis.com/css2?family=Poppins&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Karma:wght@300&display=swap');
+
 @font-face {
     font-family:'Duplet';
     src: url(/Fonts/Duplet/Duplet-Regular.otf)
@@ -25,24 +28,24 @@
   }
 
 h3{ 
-	font-family: 'Duplet'; 
+	font-family: 'Duplet',"Poppins", sans-serif; 
 	font-size: 5rem;
 	color: black;
 }
 
 h4{ 
-	font-family: 'Duplet'; 
+	font-family: 'Duplet',"Poppins", sans-serif; 
 	font-size: 3rem;
 	color: black;
 }
 
 h5{
-  font-family: 'Duplet Light'; 
+  font-family: 'Duplet Light',"Poppins", sans-serif; 
 	font-size: 2rem;
 }
 
 h6{
-  font-family: 'Duplet'; 
+  font-family: 'Duplet',"Poppins", sans-serif; 
   font-size: 1.5em;
   margin: 0 90px
 }
@@ -55,7 +58,7 @@ header{
     a{ 
         color: white; 
         text-decoration: none;
-        font-family: "Duplet"; 
+        font-family: "Duplet","Poppins", sans-serif; 
         font-size: 3rem;
 
     }
