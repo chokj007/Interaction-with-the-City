@@ -278,7 +278,7 @@ select{
 /* Media Queries */
 
 /* Tablet */
-@media (min-width:768px) and (max-width:1078px) {
+@media (min-width:768px) and (max-width:1278px) {
 
 	h1{ 
 		font-size: 4rem;
